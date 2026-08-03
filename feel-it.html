@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Skontaktuj się z Protectiv Solutions — telefon, e-mail, adres siedziby i social media." />
-  <title>Kontakt — Protectiv Solutions</title>
+  <meta name="description" content="Feel It — marka Protectiv Solutions. Zapach, który zostaje w pamięci: Eau de Parfum i krem zapachowy do auta i na nadgarstek." />
+  <title>Feel It — Protectiv Solutions</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
   <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-256.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:ital,wght@0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/kontakt.css" />
+  <link rel="stylesheet" href="css/realizacje.css" />
+  <link rel="stylesheet" href="css/feel-it.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 </head>
 <body>
@@ -34,9 +35,9 @@
       <ul class="navbar-links" id="navbarLinks">
         <li><a href="index.html" class="navbar-link">Strona główna</a></li>
         <li><a href="produkty.html" class="navbar-link">Produkty</a></li>
-        <li><a href="feel-it.html" class="navbar-link">Feel It</a></li>
+        <li><a href="feel-it.html" class="navbar-link is-active">Feel It</a></li>
         <li><a href="realizacje.html" class="navbar-link">Realizacje</a></li>
-        <li><a href="kontakt.html" class="navbar-link navbar-link-cta is-active">Kontakt</a></li>
+        <li><a href="kontakt.html" class="navbar-link navbar-link-cta">Kontakt</a></li>
       </ul>
       <button class="navbar-hamburger" id="navbarHamburger" aria-label="Otwórz menu" aria-expanded="false">
         <span class="hamburger-bar"></span>
@@ -46,109 +47,101 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════════════════════════════
-       PAGE HEADER
-  ═══════════════════════════════════════════ -->
-  <header class="page-header">
-    <div class="container">
-      <span class="section-eyebrow">Kontakt</span>
-      <h1>Porozmawiajmy o Twoich potrzebach</h1>
-      <p>Zadzwoń, napisz lub wypełnij formularz — odpowiadamy najszybciej jak to możliwe.</p>
-    </div>
-  </header>
-
   <main>
 
   <!-- ═══════════════════════════════════════════
-       CONTACT
+       HERO
   ═══════════════════════════════════════════ -->
-  <section class="section">
-    <div class="container contact-layout">
-
-      <div class="contact-card">
-        <h2>Protectiv Solutions</h2>
-        <p class="contact-card-company">Protectiv Solutions Sp. z o.o.</p>
-
-        <div class="contact-detail-item">
-          <div class="contact-detail-icon"><i data-lucide="map-pin"></i></div>
-          <div>
-            <span class="contact-detail-label">Adres</span>
-            <span class="contact-detail-value">ul. Kromera 51A, 50-163 Wrocław</span>
-          </div>
-        </div>
-
-        <a href="tel:+48736820420" class="contact-detail-item">
-          <div class="contact-detail-icon"><i data-lucide="phone"></i></div>
-          <div>
-            <span class="contact-detail-label">Telefon</span>
-            <span class="contact-detail-value is-link">+48 736 820 420</span>
-          </div>
-        </a>
-
-        <a href="mailto:andrzejz.ozon@gmail.com" class="contact-detail-item">
-          <div class="contact-detail-icon"><i data-lucide="mail"></i></div>
-          <div>
-            <span class="contact-detail-label">E-mail</span>
-            <span class="contact-detail-value is-link">andrzejz.ozon@gmail.com</span>
-          </div>
-        </a>
-
-        <p class="contact-social-title">Social media</p>
-        <div class="contact-social-row">
-          <a href="https://www.instagram.com" target="_blank" rel="noopener" class="social-badge-lg" aria-label="Instagram">IG</a>
-          <a href="https://www.tiktok.com/@protective_solutions" target="_blank" rel="noopener" class="social-badge-lg" aria-label="TikTok">TT</a>
-          <a href="https://www.pinterest.com" target="_blank" rel="noopener" class="social-badge-lg" aria-label="Pinterest">PN</a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener" class="social-badge-lg" aria-label="Facebook">FB</a>
-        </div>
+  <section class="feelit-hero">
+    <div class="container">
+      <img src="images/feel-it/logo.png" alt="Feel It" class="feelit-hero-logo" />
+      <p class="feelit-hero-tagline">Feel It to nie tylko zapach. To wspomnienie miejsca, do którego chcesz wracać. Wolność, przestrzeń i luksus zamknięte w jednej kompozycji.</p>
+      <div class="feelit-hero-actions">
+        <a href="#eau-de-parfum" class="btn btn-gold">Zobacz kolekcję</a>
+        <a href="kontakt.html" class="btn btn-outline-light">Zapytaj o produkt</a>
       </div>
-
-      <div class="contact-form-card">
-        <h2>Napisz do nas</h2>
-        <p>Odpowiemy na Twoje pytanie lub przygotujemy wycenę dopasowaną do Twoich potrzeb.</p>
-
-        <form id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="contactName">Imię i nazwisko</label>
-              <input type="text" id="contactName" name="name" class="form-input" placeholder="Jan Kowalski" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="contactPhone">Telefon</label>
-              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="+48 000 000 000" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="contactEmail">E-mail</label>
-            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="jan@firma.pl" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="contactMessage">Wiadomość</label>
-            <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Opisz, jakiego produktu lub rozwiązania szukasz..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-gold form-submit">Wyślij wiadomość</button>
-          <p class="form-note" id="formSuccessMessage" style="display:none">Dziękujemy! Otworzyliśmy dla Ciebie program pocztowy z gotową wiadomością.</p>
-        </form>
-      </div>
-
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       MAP
+       EAU DE PARFUM
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="eau-de-parfum">
+    <div class="container">
+      <div class="feelit-collection-head">
+        <span class="feelit-collection-label">Feel It — Eau de Parfum</span>
+        <h2>Luksus, który nosisz przy sobie</h2>
+        <p>Kompozycja zamknięta w szkle — na nadgarstek, do torebki, na biurko. Zapach, który towarzyszy Ci w każdej chwili dnia.</p>
+      </div>
+      <div class="feelit-gallery">
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/luksus-1.jpg" data-lightbox-alt="Feel It — Eau de Parfum">
+          <img src="images/feel-it/luksus-1.jpg" alt="Feel It — Eau de Parfum" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/kilka-sztuk.jpg" data-lightbox-alt="Feel It — kolekcja flakonów">
+          <img src="images/feel-it/kilka-sztuk.jpg" alt="Feel It — kolekcja flakonów" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/poczatek.jpg" data-lightbox-alt="Feel It — początek historii">
+          <img src="images/feel-it/poczatek.jpg" alt="Feel It — początek historii" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/codziennosc.jpg" data-lightbox-alt="Feel It — w codzienności">
+          <img src="images/feel-it/codziennosc.jpg" alt="Feel It — w codzienności" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       KREM ZAPACHOWY
+  ═══════════════════════════════════════════ -->
+  <section class="section feelit-dark-section">
+    <div class="container">
+      <div class="feelit-collection-head">
+        <span class="feelit-collection-label">Feel It — Krem zapachowy</span>
+        <h2>Do auta. Na nadgarstek.</h2>
+        <p>Kompaktowy format, intensywny zapach, długotrwały efekt — stworzony do podróży, spotkań biznesowych i chwil, które chcesz zapamiętać.</p>
+      </div>
+      <div class="feelit-gallery-dark">
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/dubaj.jpg" data-lightbox-alt="Feel It — Arabian Luxury">
+          <img src="images/feel-it/dubaj.jpg" alt="Feel It — Arabian Luxury" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/biznes.jpg" data-lightbox-alt="Feel It — Business Class">
+          <img src="images/feel-it/biznes.jpg" alt="Feel It — Business Class" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/samolot.jpg" data-lightbox-alt="Feel It — Luxury You Can Wear">
+          <img src="images/feel-it/samolot.jpg" alt="Feel It — Luxury You Can Wear" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/monaco.jpg" data-lightbox-alt="Feel It — Monaco Edition">
+          <img src="images/feel-it/monaco.jpg" alt="Feel It — Monaco Edition" loading="lazy" />
+        </div>
+        <div class="feelit-gallery-item" data-lightbox-src="images/feel-it/black-gold.jpg" data-lightbox-alt="Feel It — Monaco Edition, wersja Black &amp; Gold">
+          <img src="images/feel-it/black-gold.jpg" alt="Feel It — Monaco Edition, wersja Black & Gold" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PREZENTACJA (placeholder)
   ═══════════════════════════════════════════ -->
   <section class="section-tight section-surface">
     <div class="container">
-      <iframe
-        class="map-frame"
-        src="https://www.google.com/maps?q=ul.%20Kromera%2051A%2C%2050-163%20Wroc%C5%82aw&output=embed"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Mapa — Protectiv Solutions Sp. z o.o., ul. Kromera 51A, Wrocław">
-      </iframe>
+      <div class="feelit-presentation">
+        <div class="feelit-presentation-icon"><i data-lucide="play-circle"></i></div>
+        <h3>Prezentacja marki Feel It</h3>
+        <p>Pełna prezentacja marki pojawi się tutaj wkrótce.</p>
+      </div>
     </div>
   </section>
 
   </main>
+
+  <!-- ═══════════════════════════════════════════
+       LIGHTBOX
+  ═══════════════════════════════════════════ -->
+  <div class="gallery-lightbox" id="galleryLightbox">
+    <button class="gallery-lightbox-close" aria-label="Zamknij"><i data-lucide="x"></i></button>
+    <img src="" alt="" />
+  </div>
 
   <!-- ═══════════════════════════════════════════
        FOOTER
@@ -174,6 +167,7 @@
           <ul class="footer-links-list">
             <li><a href="index.html" class="footer-link">Strona główna</a></li>
             <li><a href="produkty.html" class="footer-link">Produkty</a></li>
+            <li><a href="feel-it.html" class="footer-link">Feel It</a></li>
             <li><a href="realizacje.html" class="footer-link">Realizacje</a></li>
             <li><a href="kontakt.html" class="footer-link">Kontakt</a></li>
           </ul>

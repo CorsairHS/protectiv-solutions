@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════════════════════════════════
+   FEEL IT — strona marki
+   Font wordmarku: Poppins ExtraBold + skew (przybliżenie logotypu)
+═══════════════════════════════════════════════════════════════ */
+
+.feelit-wordmark {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  transform: skewX(-6deg);
+  display: inline-block;
+}
+
+/* ─── HERO ────────────────────────────────────────────────────── */
+.feelit-hero {
+  position: relative;
+  background: radial-gradient(ellipse at 30% 20%, #1a1a1a 0%, #000 65%);
+  color: #fff;
+  padding: 90px 0 80px;
+  overflow: hidden;
+  text-align: center;
+}
+.feelit-hero-logo {
+  max-width: 460px;
+  width: 80%;
+  margin: 0 auto 8px;
+  filter: drop-shadow(0 0 40px rgba(255,255,255,0.15));
+}
+.feelit-hero-tagline {
+  font-size: clamp(18px, 2.4vw, 24px);
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 24px auto 36px;
+  color: rgba(255,255,255,0.82);
+  font-style: italic;
+}
+.feelit-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* ─── SECTION HEADS ──────────────────────────────────────────── */
+.feelit-collection-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+.feelit-collection-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.feelit-collection-head h2 { font-size: clamp(26px, 3.6vw, 36px); margin-bottom: 12px; }
+.feelit-collection-head p { color: var(--color-text-secondary); font-size: 16px; }
+
+/* ─── GALLERY (Eau de Parfum, jasna sekcja) ─────────────────── */
+.feelit-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.feelit-gallery-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  aspect-ratio: 3/4;
+}
+.feelit-gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.feelit-gallery-item:hover img { transform: scale(1.06); }
+
+/* ─── GALLERY (Krem zapachowy, ciemna sekcja) ───────────────── */
+.feelit-dark-section { background: #0b0b0f; }
+.feelit-dark-section .feelit-collection-head p { color: rgba(255,255,255,0.6); }
+.feelit-dark-section .feelit-collection-head h2 { color: #fff; }
+.feelit-gallery-dark {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.feelit-gallery-dark .feelit-gallery-item { aspect-ratio: 3/2; }
+
+/* ─── PREZENTACJA (placeholder) ─────────────────────────────── */
+.feelit-presentation {
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 64px 32px;
+  text-align: center;
+  background: var(--color-surface);
+}
+.feelit-presentation-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  color: var(--color-gold-dark);
+}
+.feelit-presentation-icon svg { width: 24px; height: 24px; }
+.feelit-presentation h3 { font-size: 20px; margin-bottom: 8px; }
+.feelit-presentation p { color: var(--color-text-secondary); font-size: 15px; max-width: 420px; margin: 0 auto; }
+
+@media (max-width: 960px) {
+  .feelit-gallery { grid-template-columns: 1fr 1fr; }
+  .feelit-gallery-dark { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .feelit-gallery { grid-template-columns: 1fr; }
+  .feelit-gallery-dark { grid-template-columns: 1fr; }
+}
