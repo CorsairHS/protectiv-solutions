@@ -90,25 +90,37 @@ function setupContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
 
+  const success = document.getElementById("formSuccessMessage");
+  const errorMsg = document.getElementById("formErrorMessage");
+  const submitBtn = form.querySelector(".form-submit");
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = form.querySelector("#contactName").value.trim();
-    const email = form.querySelector("#contactEmail").value.trim();
-    const phone = form.querySelector("#contactPhone").value.trim();
-    const message = form.querySelector("#contactMessage").value.trim();
+    if (success) success.style.display = "none";
+    if (errorMsg) errorMsg.style.display = "none";
+    if (submitBtn) submitBtn.disabled = true;
 
-    const subject = encodeURIComponent("Zapytanie ze strony – " + name);
-    const body = encodeURIComponent(
-      "Imię i nazwisko: " + name +
-      "\nTelefon: " + phone +
-      "\nE-mail: " + email +
-      "\n\nWiadomość:\n" + message
-    );
+    const formData = new FormData(form);
 
-    window.location.href = "mailto:andrzejz.ozon@gmail.com?subject=" + subject + "&body=" + body;
-
-    const success = document.getElementById("formSuccessMessage");
-    if (success) success.classList.remove("hidden");
+    fetch("send.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data && data.ok) {
+          form.reset();
+          if (success) success.style.display = "block";
+        } else if (errorMsg) {
+          errorMsg.style.display = "block";
+        }
+      })
+      .catch(function () {
+        if (errorMsg) errorMsg.style.display = "block";
+      })
+      .finally(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
   });
 }
 

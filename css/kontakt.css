@@ -82,6 +82,8 @@
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form-submit { width: 100%; justify-content: center; margin-top: 6px; }
 .form-note { font-size: 12.5px; color: var(--color-text-muted); margin-top: 14px; text-align: center; }
+.form-note-error { color: #c0392b; }
+.form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 .map-frame {
   width: 100%;
