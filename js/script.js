@@ -102,7 +102,7 @@ function setupContactForm() {
 
     const formData = new FormData(form);
 
-    fetch("send.php", {
+    fetch("/send.php", {
       method: "POST",
       body: formData,
     })

@@ -208,6 +208,28 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; color: var(
 }
 .navbar-link-cta:hover { background: var(--color-navy-700); }
 
+.navbar-lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 4px;
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+}
+.navbar-lang-link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text-secondary);
+  padding: 2px 6px;
+  border-radius: var(--radius-pill);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.navbar-lang-link:hover { color: var(--color-navy); }
+.navbar-lang-link.is-active { color: var(--color-navy); background: var(--color-surface-alt); }
+.navbar-lang-sep { color: var(--color-border); font-size: 12px; }
+
 .navbar-hamburger {
   display: none;
   flex-direction: column;

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Skontaktuj się z Protectiv Solutions — telefon, e-mail, adres siedziby i social media." />
-  <title>Kontakt — Protectiv Solutions</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-256.png">
+  <meta name="description" content="Get in touch with Protectiv Solutions — phone, e-mail, headquarters address and social media." />
+  <title>Contact — Protectiv Solutions</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="../images/favicon-256.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="stylesheet" href="css/kontakt.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/kontakt.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
 </head>
 <body>
@@ -22,7 +22,7 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="index.html" class="navbar-logo">
-        <img src="images/logo-icon.png" alt="Protectiv Solutions" class="navbar-logo-icon" />
+        <img src="../images/logo-icon.png" alt="Protectiv Solutions" class="navbar-logo-icon" />
         <div class="navbar-wordmark">
           <div class="navbar-wordmark-row">
             <span class="gold-dash"></span>
@@ -32,18 +32,18 @@
         </div>
       </a>
       <ul class="navbar-links" id="navbarLinks">
-        <li><a href="index.html" class="navbar-link">Strona główna</a></li>
-        <li><a href="produkty.html" class="navbar-link">Produkty</a></li>
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="produkty.html" class="navbar-link">Products</a></li>
         <li><a href="feel-it.html" class="navbar-link">Feel It</a></li>
-        <li><a href="realizacje.html" class="navbar-link">Realizacje</a></li>
-        <li><a href="kontakt.html" class="navbar-link navbar-link-cta is-active">Kontakt</a></li>
+        <li><a href="realizacje.html" class="navbar-link">Portfolio</a></li>
+        <li><a href="kontakt.html" class="navbar-link navbar-link-cta is-active">Contact</a></li>
         <li class="navbar-lang">
-          <span class="navbar-lang-link is-active">PL</span>
+          <a href="../kontakt.html" class="navbar-lang-link">PL</a>
           <span class="navbar-lang-sep">/</span>
-          <a href="en/kontakt.html" class="navbar-lang-link">EN</a>
+          <span class="navbar-lang-link is-active">EN</span>
         </li>
       </ul>
-      <button class="navbar-hamburger" id="navbarHamburger" aria-label="Otwórz menu" aria-expanded="false">
+      <button class="navbar-hamburger" id="navbarHamburger" aria-label="Open menu" aria-expanded="false">
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
@@ -56,9 +56,9 @@
   ═══════════════════════════════════════════ -->
   <header class="page-header">
     <div class="container">
-      <span class="section-eyebrow">Kontakt</span>
-      <h1>Porozmawiajmy o Twoich potrzebach</h1>
-      <p>Zadzwoń, napisz lub wypełnij formularz — odpowiadamy najszybciej jak to możliwe.</p>
+      <span class="section-eyebrow">Contact</span>
+      <h1>Let's talk about what you need</h1>
+      <p>Call, write, or fill in the form — we reply as fast as we can.</p>
     </div>
   </header>
 
@@ -77,15 +77,15 @@
         <div class="contact-detail-item">
           <div class="contact-detail-icon"><i data-lucide="map-pin"></i></div>
           <div>
-            <span class="contact-detail-label">Adres</span>
-            <span class="contact-detail-value">ul. Kromera 51A, 50-163 Wrocław</span>
+            <span class="contact-detail-label">Address</span>
+            <span class="contact-detail-value">ul. Kromera 51A, 50-163 Wrocław, Poland</span>
           </div>
         </div>
 
         <a href="tel:+48736820420" class="contact-detail-item">
           <div class="contact-detail-icon"><i data-lucide="phone"></i></div>
           <div>
-            <span class="contact-detail-label">Telefon</span>
+            <span class="contact-detail-label">Phone</span>
             <span class="contact-detail-value is-link">+48 736 820 420</span>
           </div>
         </a>
@@ -105,35 +105,35 @@
       </div>
 
       <div class="contact-form-card">
-        <h2>Napisz do nas</h2>
-        <p>Odpowiemy na Twoje pytanie lub przygotujemy wycenę dopasowaną do Twoich potrzeb.</p>
+        <h2>Write to us</h2>
+        <p>We'll answer your question or prepare a quote tailored to your needs.</p>
 
         <form id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label class="form-label" for="contactName">Imię i nazwisko</label>
-              <input type="text" id="contactName" name="name" class="form-input" placeholder="Jan Kowalski" required />
+              <label class="form-label" for="contactName">Full name</label>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="John Smith" required />
             </div>
             <div class="form-group">
-              <label class="form-label" for="contactPhone">Telefon</label>
-              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="+48 000 000 000" required />
+              <label class="form-label" for="contactPhone">Phone</label>
+              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="+1 000 000 0000" required />
             </div>
           </div>
           <div class="form-group">
             <label class="form-label" for="contactEmail">E-mail</label>
-            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="jan@firma.pl" required />
+            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="john@company.com" required />
           </div>
           <div class="form-group">
-            <label class="form-label" for="contactMessage">Wiadomość</label>
-            <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Opisz, jakiego produktu lub rozwiązania szukasz..."></textarea>
+            <label class="form-label" for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" class="form-input form-textarea" placeholder="Describe the product or solution you're looking for..."></textarea>
           </div>
           <div class="form-honeypot" aria-hidden="true">
-            <label for="contactWebsite">Strona internetowa</label>
+            <label for="contactWebsite">Website</label>
             <input type="text" id="contactWebsite" name="website" tabindex="-1" autocomplete="off" />
           </div>
-          <button type="submit" class="btn btn-gold form-submit">Wyślij wiadomość</button>
-          <p class="form-note" id="formSuccessMessage" style="display:none">Dziękujemy! Twoja wiadomość została wysłana.</p>
-          <p class="form-note form-note-error" id="formErrorMessage" style="display:none">Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na biuro@protectivgroup.pl.</p>
+          <button type="submit" class="btn btn-gold form-submit">Send message</button>
+          <p class="form-note" id="formSuccessMessage" style="display:none">Thank you! Your message has been sent.</p>
+          <p class="form-note form-note-error" id="formErrorMessage" style="display:none">We couldn't send your message. Please try again or e-mail biuro@protectivgroup.pl.</p>
         </form>
       </div>
 
@@ -150,7 +150,7 @@
         src="https://www.google.com/maps?q=ul.%20Kromera%2051A%2C%2050-163%20Wroc%C5%82aw&output=embed"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        title="Mapa — Protectiv Solutions Sp. z o.o., ul. Kromera 51A, Wrocław">
+        title="Map — Protectiv Solutions Sp. z o.o., ul. Kromera 51A, Wrocław">
       </iframe>
     </div>
   </section>
@@ -165,50 +165,50 @@
       <div class="footer-layout">
         <div class="footer-brand">
           <div class="footer-logo-row">
-            <img src="images/logo-icon.png" alt="Protectiv Solutions" class="footer-logo-icon" />
+            <img src="../images/logo-icon.png" alt="Protectiv Solutions" class="footer-logo-icon" />
             <span class="footer-logo-text">Protectiv Solutions</span>
           </div>
-          <p class="footer-tagline">Jakość, natura, odpowiedzialność. Chemia, która rozwiązuje problemy.</p>
+          <p class="footer-tagline">Quality, nature, responsibility. Chemistry that solves problems.</p>
           <div class="footer-social">
             <a href="https://www.tiktok.com/@protective_solutions" target="_blank" rel="noopener" class="social-badge" aria-label="TikTok">TT</a>
           </div>
         </div>
         <div class="footer-links-group">
-          <h4 class="footer-links-title">Nawigacja</h4>
+          <h4 class="footer-links-title">Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link">Strona główna</a></li>
-            <li><a href="produkty.html" class="footer-link">Produkty</a></li>
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="produkty.html" class="footer-link">Products</a></li>
             <li><a href="feel-it.html" class="footer-link">Feel It</a></li>
-            <li><a href="realizacje.html" class="footer-link">Realizacje</a></li>
-            <li><a href="kontakt.html" class="footer-link">Kontakt</a></li>
+            <li><a href="realizacje.html" class="footer-link">Portfolio</a></li>
+            <li><a href="kontakt.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
         <div class="footer-links-group">
-          <h4 class="footer-links-title">Kategorie</h4>
+          <h4 class="footer-links-title">Categories</h4>
           <ul class="footer-links-list">
-            <li><a href="produkty.html#czystosc" class="footer-link">Czystość</a></li>
-            <li><a href="produkty.html#blask-i-ochrona" class="footer-link">Blask i ochrona</a></li>
-            <li><a href="produkty.html#wydajnosc" class="footer-link">Wydajność</a></li>
-            <li><a href="produkty.html#precyzyjne-rozwiazania" class="footer-link">Precyzyjne rozwiązania</a></li>
-            <li><a href="produkty.html#obiekty-sakralne" class="footer-link">Obiekty sakralne</a></li>
+            <li><a href="produkty.html#cleanliness" class="footer-link">Cleanliness</a></li>
+            <li><a href="produkty.html#shine-and-protection" class="footer-link">Shine and protection</a></li>
+            <li><a href="produkty.html#performance" class="footer-link">Performance</a></li>
+            <li><a href="produkty.html#precision-solutions" class="footer-link">Precision solutions</a></li>
+            <li><a href="produkty.html#sacred-sites" class="footer-link">Sacred sites</a></li>
           </ul>
         </div>
         <div class="footer-links-group">
-          <h4 class="footer-links-title">Kontakt</h4>
+          <h4 class="footer-links-title">Contact</h4>
           <ul class="footer-links-list">
             <li><a href="tel:+48736820420" class="footer-link">+48 736 820 420</a></li>
             <li><a href="mailto:biuro@protectivgroup.pl" class="footer-link">biuro@protectivgroup.pl</a></li>
             <li><span class="footer-link-plain">Protectiv Solutions Sp. z o.o.</span></li>
-            <li><span class="footer-link-plain">ul. Kromera 51A, 50-163 Wrocław</span></li>
+            <li><span class="footer-link-plain">ul. Kromera 51A, 50-163 Wrocław, Poland</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Protectiv Solutions Sp. z o.o. Wszelkie prawa zastrzeżone.</span>
+        <span>© 2026 Protectiv Solutions Sp. z o.o. All rights reserved.</span>
       </div>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
