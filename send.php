@@ -1,11 +1,14 @@
 <?php
 /**
- * Prosty endpoint formularza kontaktowego.
+ * Endpoint formularza kontaktowego.
  * Odbiera dane POST z formularza (kontakt.html), waliduje je
- * i wysyła e-mail przez wbudowaną funkcję mail() (SMTP hostingu home.pl).
+ * i wysyła e-mail przez uwierzytelnione SMTP skrzynki biuro@protectivgroup.pl
+ * (patrz smtp_mailer.php i config.php).
  */
 
 header('Content-Type: application/json; charset=utf-8');
+
+require __DIR__ . '/smtp_mailer.php';
 
 // Tylko żądania POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -49,8 +52,16 @@ if (!empty($errors)) {
   exit;
 }
 
-$to      = 'biuro@protectivgroup.pl';
-$subject = '=?UTF-8?B?' . base64_encode('Zapytanie ze strony – ' . $name) . '?=';
+$configPath = __DIR__ . '/config.php';
+if (!file_exists($configPath)) {
+  error_log('send.php: brak pliku config.php — skopiuj config.example.php i uzupełnij dane SMTP.');
+  http_response_code(500);
+  echo json_encode(['ok' => false, 'error' => 'server_not_configured']);
+  exit;
+}
+$config = require $configPath;
+
+$subject = 'Zapytanie ze strony – ' . $name;
 
 $body  = "Nowe zapytanie ze strony Protectiv Solutions\n\n";
 $body .= "Imię i nazwisko: {$name}\n";
@@ -58,17 +69,24 @@ $body .= "Telefon: {$phone}\n";
 $body .= "E-mail: {$email}\n\n";
 $body .= "Wiadomość:\n" . $message . "\n";
 
-$headers = [];
-$headers[] = 'MIME-Version: 1.0';
-$headers[] = 'Content-Type: text/plain; charset=UTF-8';
-$headers[] = 'From: Formularz Protectiv Solutions <biuro@protectivgroup.pl>';
-$headers[] = 'Reply-To: ' . $email;
-
-$sent = mail($to, $subject, $body, implode("\r\n", $headers));
-
-if ($sent) {
+try {
+  $mailer = new SmtpMailer(
+    $config['smtp_host'],
+    $config['smtp_port'],
+    $config['smtp_user'],
+    $config['smtp_pass']
+  );
+  $mailer->send(
+    $config['smtp_user'],
+    'Formularz Protectiv Solutions',
+    $config['mail_to'],
+    $subject,
+    $body,
+    $email
+  );
   echo json_encode(['ok' => true]);
-} else {
+} catch (Exception $e) {
+  error_log('send.php: błąd wysyłki SMTP — ' . $e->getMessage());
   http_response_code(500);
   echo json_encode(['ok' => false, 'error' => 'send_failed']);
 }
